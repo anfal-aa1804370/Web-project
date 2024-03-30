@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Trend | Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <h3 class="nav-brand" onclick="gotoHome()">Trend</h3>
+        <nav class="nav">
+            <ul class="nav-items" id="nav-items">
+                <li class="nav-item" id="home"><a href="/">Home</a></li>
+                <li class="nav-item" style="display: none;" id="orders"><a href="orders.html">Orders</a></li>
+                <li class="nav-item" style="display: none;" id="products"><a href="products.html">Products</a></li>
+                <li class="nav-item" id="login"><a href="login.html">Login</a></li>
+                <li class="nav-item active" id="profile" style="display: none;"><a href="profile.html">Profile</a></li>
+                <li class="nav-item" style="display: none;" id="logout" onclick="logout()"><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+        </div>
+    </header>
+    <main class="login-page">
+        <div class="login-form-card">
+            <h1 class="login-header">User Profile</h1>
+            <table id="profile-table" style="width: 70vw;">
+
+            </table>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="copyright">Trend&copy; 2024</p>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            RenderProfile()
+            navManipulator()
+        })
+    </script>
+</body>
+
+</html>

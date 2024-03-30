@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Tom & Jarry T-Shirt",
+    "sellerId": 2,
+    "price": 599,
+    "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?format=webp&w=480&dpr=1.0",
+    "stock": 50,
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia consequuntur officiis? Numquam rerum sint ullam odit esse eius fuga distinctio nobis, sequi laborum repellat earum accusamus, deserunt explicabo delectus magnam sed facere. Ut nemo deserunt velit optio quibusdam, omnis maxime rem iste itaque animi est voluptate modi aut autem reprehenderit assumenda aliquam harum officia. Explicabo iusto ut ab reprehenderit cupiditate, optio, impedit debitis necessitatibus ad nulla sequi eum praesentium suscipit consequatur soluta, illum quaerat rerum enim asperiores obcaecati numquam mollitia ullam. Voluptatem velit nisi, at iste possimus saepe eum fuga dicta magni. Deleniti dignissimos iusto minus tempora dicta velit reiciendis, corporis perspiciatis nesciunt aliquid unde excepturi adipisci qui vitae sequi harum nemo rem quas deserunt inventore autem porro obcaecati ipsum! Voluptatum inventore, possimus molestias dolorem repudiandae nihil asperiores adipisci, cupiditate dolor amet quisquam laudantium fugit vitae? Natus laborum ut beatae ex sint non, similique praesentium officiis ipsam cumque deserunt?"
+  },
+  {
+    "name": "Random White & Brown T-Shirt",
+    "sellerId": 2,
+    "price": 599,
+    "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1707314527_4431294.jpg?format=webp&w=480&dpr=1.0",
+    "stock": 100,
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia consequuntur officiis? Numquam rerum sint ullam odit esse eius fuga distinctio nobis, sequi laborum repellat earum accusamus, deserunt explicabo delectus magnam sed facere. Ut nemo deserunt velit optio quibusdam, omnis maxime rem iste itaque animi est voluptate modi aut autem reprehenderit assumenda aliquam harum officia. Explicabo iusto ut ab reprehenderit cupiditate, optio, impedit debitis necessitatibus ad nulla sequi eum praesentium suscipit consequatur soluta, illum quaerat rerum enim asperiores obcaecati numquam mollitia ullam. Voluptatem velit nisi, at iste possimus saepe eum fuga dicta magni. Deleniti dignissimos iusto minus tempora dicta velit reiciendis, corporis perspiciatis nesciunt aliquid unde excepturi adipisci qui vitae sequi harum nemo rem quas deserunt inventore autem porro obcaecati ipsum! Voluptatum inventore, possimus molestias dolorem repudiandae nihil asperiores adipisci, cupiditate dolor amet quisquam laudantium fugit vitae? Natus laborum ut beatae ex sint non, similique praesentium officiis ipsam cumque deserunt?"
+  },
+  {
+    "name": "Basic T-Shirt",
+    "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1708336657_7097871.jpg?format=webp&w=480&dpr=1.0",
+    "price": 399,
+    "stock": 100,
+    "description": "https://static.zara.net/assets/public/103a/0310/382f465f8a2a/547d4c27561e/01887450832-e1/01887450832-e1.jpg?ts=1704812411391&w=750",
+    "sellerId": 2
+  },
+  {
+    "name": "White Solid",
+    "image": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1708336657_7097871.jpg?format=webp&w=480&dpr=1.0",
+    "price": 199,
+    "stock": 150,
+    "description": "Some random description",
+    "sellerId": 2
+  }
+]

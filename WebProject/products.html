@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Trend | Products</title>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <h3 class="nav-brand" onclick="gotoHome()">Trend</h3>
+            <span id="user-type"></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-items" id="nav-items">
+                <li class="nav-item" id="home"><a href="/">Home</a></li>
+                <li class="nav-item" style="display: none;" id="orders"><a href="orders.html">Orders</a></li>
+                <li class="nav-item active" style="display: none;" id="products"><a href="products.html">Products</a></li>
+                <li class="nav-item" id="login"><a href="login.html">Login</a></li>
+                <li class="nav-item" id="profile" style="display: none;"><a href="profile.html">Profile</a></li>
+                <li class="nav-item" style="display: none;" id="logout" onclick="logout()"><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+        </div>
+    </header>
+    <main class="seller-product-container">
+        <h1 class="login-header">My Products</h1>
+        <div class="add-button-div" id="add-button">
+            <button class="add-button" onclick="addProductButton()">Add product</button>
+        </div>
+        <section class="product-container" id="product-container">
+            <!-- products will be populated by javasecript -->
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="copyright">Trend&copy; 2024</p>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadSellerProducts()
+            navManipulatorAuthenticated()
+            })
+    </script>
+
+</body>
+
+</html>

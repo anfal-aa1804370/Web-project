@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Trend | Add Product</title>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <h3 class="nav-brand" onclick="gotoHome()">Trend</h3>
+            <span id="user-type"></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-items" id="nav-items">
+                <li class="nav-item" id="home"><a href="/">Home</a></li>
+                <li class="nav-item" style="display: none;" id="orders"><a href="orders.html">Orders</a></li>
+                <li class="nav-item" style="display: none;" id="products"><a href="products.html">Products</a></li>
+                <li class="nav-item" id="login"><a href="login.html">Login</a></li>
+                <li class="nav-item" id="profile" style="display: none;"><a href="profile.html">Profile</a></li>
+                <li class="nav-item" style="display: none;" id="logout" onclick="logout()"><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+        </div>
+    </header>
+    <main class="login-page">
+        <div class="login-form-card">
+            <h1 class="login-header">Add products</h1>
+            <form id="addProductForm" method="POST" class="login-form">
+                <div class="input-container">
+                    <label for="name">Product Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="input-container">
+                    <label for="image">Product  Image</label>
+                    <input type="url" name="image" id="image" required>
+                </div>
+                <div class="input-container">
+                    <label for="price">Product  Price</label>
+                    <input type="number" min="0" name="price" id="price" required>
+                </div>
+                <div class="input-container">
+                    <label for="stock">Product  Stock</label>
+                    <input type="number" min="0" name="stock" id="stock" required>
+                </div>
+                <div class="input-container">
+                    <label for="description">Product  Description</label>
+                    <textarea name="description" id="description" row="5" cols="97" required> </textarea>
+                </div>
+                <button class="login-button product-button" onclick="addProduct()">Add Product</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="copyright">Trend&copy; 2024</p>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            navManipulatorAuthenticated()
+        })
+    </script>
+</body>
+
+</html>

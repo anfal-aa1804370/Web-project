@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "surname": "Doe",
+    "type": "customer",
+    "shipping_address": "123 2nd Street, meta City, Dynemic State, 123456",
+    "username": "john_doe",
+    "password": "123456",
+    "money": 6000
+  },
+  {
+    "id": 2,
+    "name": "Jane",
+    "surname": "Doe",
+    "type": "seller",
+    "username": "jane_doe",
+    "password": "123456",
+    "money": 0
+  },
+  {
+    "id": 3,
+    "name": "System",
+    "surname": "Admin",
+    "username": "admin",
+    "type": "admin",
+    "password": "123456"
+  }
+]
