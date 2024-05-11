@@ -1,15 +1,6 @@
 export default class Order {
-  constructor(
-    username,
-    address,
-    city,
-    state,
-    pincode,
-    quantity,
-    name,
-    price,
-    total
-  ) {
+
+  constructor(username, address, city, state, pincode, quantity, name, price, total) {
     this.username = username;
     this.address = address;
     this.city = city;
@@ -20,4 +11,5 @@ export default class Order {
     this.price = price;
     this.total = total;
   }
+  
 }

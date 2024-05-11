@@ -2,27 +2,30 @@ import User from "../models/user.js";
 
 export default class UserRepo {
   constructor() {
-    this.userFile = "../database/users.json";
+    this.userFile = "./database/users.json";
   }
 
   async login(username, password) {
     try {
-      let response = await fetch(this.userFile);
+      let response = await fetch(this.userFile);  
       let users = await response.json();
+
       for (let u in users) {
         Object.setPrototypeOf(u, User.prototype);
       }
+
       localStorage.setItem("users", JSON.stringify(users));
-      let user = users.find(
-        (user) => user.username === username && user.password === password
-      );
+
+      let user = users.find((user) => user.username === username && user.password === password);
 
       if (user) {
         localStorage.setItem("user", JSON.stringify(user));
         window.location.href = "index.html";
+
       } else {
         alert("User not found");
       }
+
     } catch (error) {
       console.log(error);
     }
@@ -37,6 +40,7 @@ export default class UserRepo {
   updateMoney(id, amount, type) {
     let users = JSON.parse(localStorage.getItem("users"));
     console.log(users);
+
     let index = users.findIndex((user) => user.id === id);
     if (index !== -1) {
       if (type === "add") {
@@ -45,6 +49,7 @@ export default class UserRepo {
         users[index].money -= amount;
       }
     }
+    
     localStorage.setItem("users", JSON.stringify(users));
     this.updateCurrentUser();
   }

@@ -48,8 +48,8 @@ function navbar() {
 // Render Profile HTML
 function RenderProfile() {
   const user = JSON.parse(localStorage.getItem("user"));
-  const { name, surname, username, shipping_address, type, money } = user;
-  let profileTable = document.getElementById("profile-table");
+  const {name, surname, username, shipping_address, type, money } = user;
+  let profileTable = document.querySelector("#profile-table");
 
   if (type === "customer") {
     profileTable.innerHTML =
@@ -164,7 +164,7 @@ function RenderProfile() {
   }
 }
 
-// Redirect to Home page
+// Redirect to Home page                      ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function gotoHome() {
   window.location.href = "/";
 }
@@ -175,7 +175,7 @@ async function loadProduct() {
   renderProduct(products);
 }
 
-// Seacrh Products
+// Seacrh Products                            ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function searchProduct() {
   var searchInput = document.getElementById("search");
   var searchTerm = searchInput.value.toLowerCase();
@@ -197,14 +197,14 @@ async function loadSellerProducts() {
       var { id } = JSON.parse(localStorage.getItem("user"));
       var products = products.filter((p) => p.sellerId === id);
     }
-
     renderProduct(products);
+
   } catch (error) {
     console.log(error);
   }
 }
 
-// Redirect to Add Product Page
+// Redirect to Add Product Page              ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function addProductButton() {
   window.location.href = "add_product.html";
 }
@@ -238,7 +238,7 @@ function renderProduct(products) {
   });
 }
 
-// Add new product
+// Add new product                        ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function addProduct() {
   document
     .getElementById("addProductForm")
@@ -270,7 +270,7 @@ function getCheckoutParam() {
   checkoutDetail(product);
 }
 
-// Render Checout page with full functionality
+// Render Checout page with full functionality                
 async function checkoutDetail(name) {
   try {
     const product = productRepo.getProduct(name);
@@ -330,6 +330,7 @@ async function checkoutDetail(name) {
         "</div>";
 
       var quantityInput = document.getElementById("quantity");
+
       quantityInput.addEventListener("change", function () {
         let price = parseInt(product.price);
         let qrt = parseInt(quantityInput.value);
@@ -390,6 +391,7 @@ async function checkoutDetail(name) {
           alert("Order placed successfully");
           window.location.reload();
         });
+
     } else {
       console.error("Product not found");
       var productContainer = document.getElementById("product-container");
@@ -483,6 +485,7 @@ async function productDetail(name) {
           product.price +
           "</p>" +
           "</div>";
+
       } else if (user.type === "customer") {
         productContainer.innerHTML =
           "<div class='product-detail-image-container'>" +
@@ -511,6 +514,7 @@ async function productDetail(name) {
           window.location.href =
             "checkout.html?name=" + encodeURIComponent(product.name);
         });
+
       } else {
         productContainer.innerHTML =
           "<div class='product-detail-image-container'>" +
@@ -603,6 +607,7 @@ async function productDetail(name) {
 // Update the navbar according to the current user
 function navManipulator() {
   var user = JSON.parse(localStorage.getItem("user"));
+
   if (user) {
     const { id, type } = user;
 
@@ -618,12 +623,14 @@ function navManipulator() {
     if (type == "customer") {
       var orders_page = document.getElementById("orders");
       orders_page.style.display = "inline-block";
+
     } else if (type == "seller") {
       var products_page = document.getElementById("products");
       products_page.style.display = "inline-block";
 
       var userType = document.getElementById("user-type");
       userType.innerHTML = "Seller";
+
     } else if (type == "admin") {
       var orders_page = document.getElementById("orders");
       orders_page.style.display = "inline-block";
@@ -647,6 +654,7 @@ function navManipulatorAuthenticated() {
     login_page.style.display = "none";
     logout_page.style.display = "inline-block";
     profile_page.style.display = "inline-block";
+
   } else {
     window.location.href = "/login.html";
     alert("Please Login To Continue");
@@ -655,12 +663,14 @@ function navManipulatorAuthenticated() {
   if (type == "customer") {
     var orders_page = document.getElementById("orders");
     orders_page.style.display = "inline-block";
+    
   } else if (type == "seller") {
     var products_page = document.getElementById("products");
     products_page.style.display = "inline-block";
 
     var userType = document.getElementById("user-type");
     userType.innerHTML = "Seller";
+
   } else if (type == "admin") {
     var orders_page = document.getElementById("orders");
     orders_page.style.display = "inline-block";
@@ -672,6 +682,7 @@ function navManipulatorAuthenticated() {
   }
 }
 
+                                          ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 async function login() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -679,6 +690,7 @@ async function login() {
   await userRepo.login(username, password);
 }
 
+                                          ///////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function logout() {
   localStorage.removeItem("user");
   window.location.href = "/";
